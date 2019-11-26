@@ -12,8 +12,8 @@
 // });
 
 // server.listen(3000);
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
 
 // app.use(express.urlencoded({ extended: false }));
 // app.use(express.json());
@@ -38,6 +38,6 @@ const app = express();
 
 //   res.status(404).send('success');
 // });
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
-app.listen(3000);
+// app.listen(3000);
