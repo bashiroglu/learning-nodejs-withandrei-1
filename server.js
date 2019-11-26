@@ -15,20 +15,29 @@
 const express = require('express');
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.get('/', (req, res) => {
-  res.send('getting root');
-});
-app.get('/profile', (req, res) => {
-  res.send('getting profile');
-});
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
+// app.get('/', (req, res) => {
+//   res.send('getting root');
+// });
+// app.get('/profile', (req, res) => {
+//   res.send('getting profile');
+// });
 
-app.post('/profile', (req, res) => {
-  console.log(req.body);
+// app.post('/profile', (req, res) => {
+// console.log(req.body);
+// req.query
+// req.body
+// req.header
+// req.params
 
-  
-  res.send('success');
-});
+// res.send('success');
+// });
+// app.post('/profile', (req, res) => {
+//   console.log(req.body);
+
+//   res.status(404).send('success');
+// });
+app.use(express.static(__dirname + '/public'));
 
 app.listen(3000);
