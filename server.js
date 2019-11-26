@@ -15,13 +15,20 @@
 const express = require('express');
 const app = express();
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.get('/', (req, res) => {
-  const user = {
-    name: 'abdulla',
-    age: 23
-  };
-  res.send(user);
+  res.send('getting root');
+});
+app.get('/profile', (req, res) => {
+  res.send('getting profile');
 });
 
+app.post('/profile', (req, res) => {
+  console.log(req.body);
+
+  
+  res.send('success');
+});
 
 app.listen(3000);
